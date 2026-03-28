@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkskv8ldpfbp"]
+
+[ext_resource type="Script" uid="uid://dr5ypywn11si7" path="res://scripts/UI/Components/UIC_NumberEdit.cs" id="1_qbb62"]
+
+[node name="UIC_NumberEdit" type="LineEdit"]
+text = "0.0"
+script = ExtResource("1_qbb62")
+
+[connection signal="text_changed" from="." to="." method="OnTextChanged"]
+[connection signal="text_submitted" from="." to="." method="OnTextSubmitted"]

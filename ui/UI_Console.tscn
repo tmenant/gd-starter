@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmfh3rf82suba"]
+
+[ext_resource type="Script" uid="uid://7fsh53p0p1mq" path="res://scripts/UI/UI_Console.cs" id="1_3kla0"]
+[ext_resource type="Script" uid="uid://cvrrgtffrmcu5" path="res://scripts/UI/Components/UIC_CommandLineEdit.cs" id="2_5ufl2"]
+
+[node name="UI_Console" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3kla0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -549.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="UIC_CommandLineEdit" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 1
+script = ExtResource("2_5ufl2")
+
+[connection signal="focus_exited" from="VBoxContainer/UIC_CommandLineEdit" to="." method="OnFocusExited"]
+[connection signal="text_changed" from="VBoxContainer/UIC_CommandLineEdit" to="VBoxContainer/UIC_CommandLineEdit" method="OnTextChanged"]
+[connection signal="text_submitted" from="VBoxContainer/UIC_CommandLineEdit" to="VBoxContainer/UIC_CommandLineEdit" method="OnTextSubmitted"]

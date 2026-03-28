@@ -1,0 +1,12 @@
+<Project Sdk="Godot.NET.Sdk/4.6.1">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <nowarn>CA1050;IDE0003;IDE0090;IDE0074;IDE0028;IDE0290;IDE0300;IDE0301;IDE0305</nowarn>
+  </PropertyGroup>
+
+    <ItemGroup>
+    <Compile Remove="ignore\**\*.cs" />
+  </ItemGroup>
+</Project>

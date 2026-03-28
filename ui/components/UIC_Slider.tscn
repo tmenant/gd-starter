@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw0cd1akmlbfj"]
+
+[ext_resource type="Script" uid="uid://b3sdusul76im8" path="res://scripts/UI/Components/UIC_Slider.cs" id="1_w2olm"]
+[ext_resource type="PackedScene" uid="uid://bkskv8ldpfbp" path="res://scenes/UI/components/UIC_NumberEdit.tscn" id="2_h3stm"]
+
+[node name="UIC_Slider" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+offset_right = 500.0
+offset_bottom = 40.0
+size_flags_horizontal = 0
+script = ExtResource("1_w2olm")
+
+[node name="UIC_NumberEdit" parent="." instance=ExtResource("2_h3stm")]
+layout_mode = 2
+flat = true
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[connection signal="ValueChanged" from="UIC_NumberEdit" to="." method="OnValueChanged"]
+[connection signal="text_changed" from="UIC_NumberEdit" to="." method="OnTextChanged"]
+[connection signal="text_submitted" from="UIC_NumberEdit" to="." method="OnTextSubmitted"]
+[connection signal="value_changed" from="HSlider" to="." method="OnSliderValueChanged"]
