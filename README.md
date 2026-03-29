@@ -1,6 +1,6 @@
 # Godot C# Starter Template
 
-A starter template for Godot 4.x using C#. This project is designed to eliminate the boilerplate of starting a new game by providing a minimalist architecture, essential managers, a modular UI system, and an in-game developer console right out of the box.
+This project starter is designed to eliminate the boilerplate of starting a new game by providing a minimalist architecture, essential managers, a modular UI system, and an in-game developer console right out of the box.
 
 ## Features Included
 
