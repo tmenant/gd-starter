@@ -36,13 +36,13 @@ public partial class UIManager : CanvasLayer
             LoadWindow<UI_Console>();
 
         if (_event.IsActionPressed(InputMaps.ShowDebugHUD))
-            UI_DebugHUD.Instance.ToggleVisibility();
+            DebugHUD.Instance.ToggleVisibility();
     }
 
     public override void _Process(double delta)
     {
-        UI_DebugHUD.Instance.SetText("activeWindows", activeWindows.Count);
-        UI_DebugHUD.Instance.SetText("modalWindows", modalWindows.Count);
+        DebugHUD.Instance.SetText("activeWindows", activeWindows.Count);
+        DebugHUD.Instance.SetText("modalWindows", modalWindows.Count);
     }
 
     public Texture2D LoadUiIcon(string iconName)

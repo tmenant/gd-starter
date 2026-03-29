@@ -1,7 +1,7 @@
 using Godot;
 using System.Collections.Generic;
 
-public partial class UI_DebugHUD : CanvasLayer
+public partial class DebugHUD : CanvasLayer
 {
     private static readonly Color TEXT_COLOR = Colors.Green;
 
@@ -19,7 +19,7 @@ public partial class UI_DebugHUD : CanvasLayer
 
     private ColorRect backgroundRect = new ColorRect() { Color = TEXT_BG_COLOR };
 
-    public static UI_DebugHUD Instance { get; private set; }
+    public static DebugHUD Instance { get; private set; }
 
     public override void _Ready()
     {

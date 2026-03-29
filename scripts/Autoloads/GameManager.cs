@@ -24,9 +24,9 @@ public partial class GameManager : Node
 
     public override void _Process(double delta)
     {
-        UI_DebugHUD.Instance.SetText("fps", Engine.GetFramesPerSecond());
-        UI_DebugHUD.Instance.SetText("drawCalls", Performance.GetMonitor(Performance.Monitor.RenderTotalDrawCallsInFrame));
-        UI_DebugHUD.Instance.SetText("primitives", Performance.GetMonitor(Performance.Monitor.RenderTotalPrimitivesInFrame));
+        DebugHUD.Instance.SetText("fps", Engine.GetFramesPerSecond());
+        DebugHUD.Instance.SetText("drawCalls", Performance.GetMonitor(Performance.Monitor.RenderTotalDrawCallsInFrame));
+        DebugHUD.Instance.SetText("primitives", Performance.GetMonitor(Performance.Monitor.RenderTotalPrimitivesInFrame));
     }
 
     public void TogglePause()

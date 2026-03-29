@@ -6,7 +6,7 @@
     <nowarn>CA1050;IDE0003;IDE0090;IDE0074;IDE0028;IDE0290;IDE0300;IDE0301;IDE0305</nowarn>
   </PropertyGroup>
 
-    <ItemGroup>
+  <ItemGroup>
     <Compile Remove="ignore\**\*.cs" />
   </ItemGroup>
 </Project>
